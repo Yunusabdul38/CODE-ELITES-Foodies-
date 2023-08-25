@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:wght@300;400;500;600&family=Lexend+Deca:wght@400;500;700&family=Noto+Sans&family=Open+Sans:wght@400;500&family=Poppins:wght@200;300;400;500;600&family=Sofia+Sans&family=Tektur:wght@500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color:  #393e46d2;
+  color: #eeeeee;
+  font-family: 'Inter', sans-serif;
+}

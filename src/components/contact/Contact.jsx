@@ -1,7 +1,6 @@
 import React from 'react';
 import "./contact.css";
-import contactHero from "/src/Assets/contactHero.jpg";
-import mapPhoto from "/src/Assets/mapphoto.jpeg";
+import contactHero from "../Assets/contactHero.jpg";
 import {BsFillTelephoneFill} from "react-icons/bs";
 import {AiTwotoneMail} from "react-icons/ai";
 import {MdLocationOn} from "react-icons/md"
@@ -68,7 +67,7 @@ const Contact = () => {
     }
 
   return (
-    <section>
+    <section className='bg-white'>
 
         <div id='cntHero' className='relative flex items-center justify-center cursor-pointer duration-500 border-b-[1rem] border-black'>
             <div className='w-screen h-[50vh] opacity-[.8] hover:opacity-[1]'>

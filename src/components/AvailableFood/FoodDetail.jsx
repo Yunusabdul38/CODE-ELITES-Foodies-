@@ -1,6 +1,4 @@
 import style from "./FoodDetails.module.css";
-import PropTypes from 'prop-types';
-
 function FoodDetails({name,price,image,detail,addtocart}) {
   const amount = `₦${price.toFixed(2)}`
 

@@ -1,5 +1,4 @@
 import style from "./FoodDetails.module.css";
-
 function FoodDetails({name,price,image,detail,addtocart}) {
   const amount = `₦${price.toFixed(2)}`
 
@@ -22,4 +21,6 @@ function FoodDetails({name,price,image,detail,addtocart}) {
     </div>
   );
 }
+
+
 export default FoodDetails;

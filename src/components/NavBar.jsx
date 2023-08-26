@@ -13,7 +13,7 @@ const menuIcon = <FontAwesomeIcon icon={faBars} />;
 const xIcon = <FontAwesomeIcon icon={faXmark} />;
 
 const navlist =["home","About Us","contact",carticon,bookmarkedIcon]
-function NavigationBar({handlePage,navbar}) {
+function NavigationBar(handlePage,navbar) {
   const [showMenu, setShowMenu] = useState(false);  
   return (
     <nav className={style["nav-bar"]}>

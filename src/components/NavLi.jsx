@@ -1,12 +1,11 @@
-import style from "./NavBar.module.css"
-
-function NavLi({ value, handlePage, navbar }) {
+function NavLi({ value, handlePage, navbar, showMenuHandler}) {
   function navHandler() {
     if(value === "About Us")  return
     handlePage(value);
+    showMenuHandler()
   }
   const currentPage = value === navbar
-  return <li onClick={navHandler} className={currentPage?style.active:""}>
+  return <li onClick={navHandler} className={currentPage?"trnslate-y-[-5px] ml-4 md:ml-0 text-white transition-all ease-linear p-[5px] w-1/3 text-center rounded-md bg-[#393e46]":""}>
   {value}
 </li>;
 }

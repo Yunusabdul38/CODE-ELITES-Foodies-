@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css';
 import NavigationBar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from "./components/Home/Home"

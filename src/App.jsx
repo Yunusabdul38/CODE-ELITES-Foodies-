@@ -2,8 +2,8 @@ import { useState } from 'react';
 import NavigationBar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from "./components/Home/Home"
-import FoodList from "./Components/AvailableFood/FoodList";
-import Contact from './components/contact/Contact';
+import Contact from "./components/contact/Contact"
+import FoodList from "./components/AvailableFood/FoodList"
 
 function App() {
   const [page, setPage] = useState("home");

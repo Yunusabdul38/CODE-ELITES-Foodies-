@@ -1,17 +1,15 @@
 import { useState } from "react";
+import PropTypes from "prop-types"
 import NavLi from "./NavLi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookmark } from "@fortawesome/free-solid-svg-icons";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-const carticon = <FontAwesomeIcon icon={faCartShopping} />;
-const bookmarkedIcon = <FontAwesomeIcon icon={faBookmark} />;
+
 const menuIcon = <FontAwesomeIcon icon={faBars} />;
 const xIcon = <FontAwesomeIcon icon={faXmark} />;
 
-const navlist =["home","About Us","contact",carticon,bookmarkedIcon]
+const navlist =["home","About Us","contact","cart","bookmarked"]
 function NavigationBar({handlePage,navbar}) {
   const [showMenu, setShowMenu] = useState(false);  
   function showMenuHandler(){
@@ -28,5 +26,10 @@ function NavigationBar({handlePage,navbar}) {
       </span>
     </nav>
   );
+}
+
+NavigationBar.propTypes={
+  handlePage:PropTypes.func.isRequired,
+  navbar:PropTypes.string.isRequired
 }
 export default NavigationBar;

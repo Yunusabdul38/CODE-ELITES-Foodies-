@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import style from "./Header.module.css";
-function Header({ handlePage }) {
+// import style from "./Header.module.css";
+import { Link } from "react-router-dom";
+function Header() {
   const [current, setCurrent] = useState(0);
-  function orderHanler() {
-    handlePage("order");
-  }
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrent((cur) => cur + 1);
@@ -62,14 +59,11 @@ function Header({ handlePage }) {
           you. Join us and savor every bite in a warm and inviting ambiance.
           Your gastronomic adventure begins here.
         </p>
-        <button className="mt-2 bg-gray-800 text-gray-100 hover:bg-gray-400 hover:text-gray-800 capitalize py-1 px-2 rounded-lg" onClick={orderHanler}>order now</button>
+        <button className="mt-2 bg-gray-800 text-gray-100 hover:bg-gray-400 hover:text-gray-800 capitalize py-1 px-2 rounded-lg"><Link to="AvailableFood/" >order now</Link></button>
         </div>
       </section>
     </div>
   );
 }
-Header.propTypes = {
-  handlePage: PropTypes.func.isRequired,
-};
 
 export default Header;

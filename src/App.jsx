@@ -1,23 +1,16 @@
-import { useState } from 'react';
+import { Fragment} from 'react';
+import { Outlet } from 'react-router-dom';
 import NavigationBar from './components/NavBar';
 import Footer from './components/Footer';
-import Home from "./components/Home/Home"
-import Contact from "./components/contact/Contact"
-import FoodList from "./components/AvailableFood/FoodList"
+
 
 function App() {
-  const [page, setPage] = useState("home");
-  function pageHandler(data) {
-    setPage(data);
-  }
   return (
-    <>
-      <NavigationBar handlePage={pageHandler} navbar={page}/>
-      {page === "home" && <Home handlePage={pageHandler}/>}
-      {page === "contact" && <Contact />}
-      {page === "order" && <FoodList />}
+    <Fragment>
+      <NavigationBar />
+      <Outlet />
       <Footer />
-    </>
+    </Fragment>
   )
 }
 

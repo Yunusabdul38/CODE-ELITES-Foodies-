@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from "react";
 import "./contact.css";
 import contactHero from "../../Assets/contactHero.jpg";
 import {BsFillTelephoneFill} from "react-icons/bs";
@@ -6,6 +6,12 @@ import {AiTwotoneMail} from "react-icons/ai";
 import {MdLocationOn} from "react-icons/md"
 
 const Contact = () => {
+
+    useEffect(() => {
+        document.title = "Foodies || contact";
+    
+        return () => (document.title = "welcome to realtor");
+    });
 
     const [formData, setFormData] = React.useState({
         userName: "",

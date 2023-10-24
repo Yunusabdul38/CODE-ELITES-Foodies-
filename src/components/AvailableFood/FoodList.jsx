@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import style from "./FoodList.module.css";
 import FoodDetails from "./FoodDetail";
 import FoodOptions from "./FoodOptions";
@@ -7,6 +7,12 @@ import { foodItemsData } from "./FoodData";
 function FoodList() {
   const [foods, setFoods] = useState({ food: foodItemsData, optionValue: "" });
   const [cart,setCart] = useState([])
+
+  useEffect(() => {
+    document.title = "Foodies || available Foods";
+
+    return () => (document.title = "welcome to Foodies");
+  });
 
   let foodDetail = foods.food.map((data) => (
     <FoodDetails

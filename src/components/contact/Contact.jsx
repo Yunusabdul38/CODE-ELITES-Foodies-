@@ -1,6 +1,6 @@
 import React from 'react';
 import "./contact.css";
-import contactHero from "../Assets/contactHero.jpg";
+import contactHero from "../../Assets/contactHero.jpg";
 import {BsFillTelephoneFill} from "react-icons/bs";
 import {AiTwotoneMail} from "react-icons/ai";
 import {MdLocationOn} from "react-icons/md"

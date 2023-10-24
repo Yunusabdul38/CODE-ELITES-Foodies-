@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import style from "./Testimony.module.css";
-import user1 from "../Assets/user-1.jpg";
-import user2 from "../Assets/user-2.jpg";
-import user3 from "../Assets/user-3.jpg";
+import user1 from "../../Assets/user-1.jpg";
+import user2 from "../../Assets/user-2.jpg";
+import user3 from "../../Assets/user-3.jpg";
 
 const arrowLeft = <FontAwesomeIcon icon={faArrowLeft}/>;
 const arrowRight = <FontAwesomeIcon icon={faArrowRight}/>;

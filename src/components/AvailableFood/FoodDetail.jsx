@@ -1,9 +1,9 @@
 import style from "./FoodDetails.module.css";
-function FoodDetails({name,price,image,detail,addtocart}) {
+function FoodDetails({foodDetail}) {
   const amount = `₦${price.toFixed(2)}`
-
+  const {name,price,image,description:detail} = foodDetail
   function addcartHandler(){
-    addtocart(name)
+    
   }
   return (
     <div className={style.card}>

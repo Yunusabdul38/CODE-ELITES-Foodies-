@@ -6,7 +6,7 @@ import { foodItemsData } from "./FoodData";
 
 function FoodList() {
   const [foods, setFoods] = useState({ food: foodItemsData, optionValue: "" });
-  const [cart,setCart] = useState([])
+  //const [cart,setCart] = useState([])
 
   useEffect(() => {
     document.title = "Foodies || available Foods";
@@ -17,11 +17,11 @@ function FoodList() {
   let foodDetail = foods.food.map((data) => (
     <FoodDetails
       key={data.id}
-      name={data.name}
+      foodDetail={data}
       detail={data.description}
       price={data.price}
       image={data.image}
-      addtocart={addtocartHandler}
+      
     />
   ));
   function optionsHandler(data) {

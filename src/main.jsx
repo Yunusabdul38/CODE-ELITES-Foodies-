@@ -6,7 +6,8 @@ import Cart from "./components/Cart/Cart.jsx";
 import Form from "./components/Form/Form.jsx";
 import AboutUs from "./components/AboutUs/AboutUs.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
-import Home from "./components/Home/Home.jsx"
+import Home from "./components/Home/Home.jsx";
+import CartAuthentication from "./Authentication/CartAuthContext.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
@@ -19,12 +20,12 @@ const route = createBrowserRouter([
     children: [
       {
         path: "/",
-        element:<Home />,
+        element: <Home />,
         errorElement: <ErrorPage />,
       },
       {
         path: "AboutUs/",
-        element:<AboutUs />,
+        element: <AboutUs />,
         errorElement: <ErrorPage />,
       },
       {
@@ -53,6 +54,8 @@ const route = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={route} />
+    <CartAuthentication>
+      <RouterProvider router={route} />
+    </CartAuthentication>
   </React.StrictMode>
 );

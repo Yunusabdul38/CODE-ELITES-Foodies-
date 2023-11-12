@@ -1,5 +1,10 @@
 .footer{
+    position: relative;
+    width: 100%;
+    bottom: 0;
     padding:30px;
+    padding-bottom: 0;
+    background-color:  #393e46d2;
 }
 .footer p {
     text-align: center;

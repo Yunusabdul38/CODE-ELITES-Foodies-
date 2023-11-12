@@ -14,27 +14,37 @@ export default function Cart() {
       <h1 className="text-slate-700 capitalize text-xl font-semibold  text-center">
         your food cart
       </h1>
-      <section className="md:grid md:grid-cols-[2fr,1fr] md:gap-3 mt-5">
-        <div className="max-h-96 overflow-y-scroll">
-          <div className="grid grid-cols-[2fr,1fr,1fr,1fr] border-b-2 border-gray-400 capitalize pb-2">
-            <h3>product</h3>
-            <h3>price</h3>
-            <h3>quality</h3>
-            <h3>total</h3>
+      {!cart.length && (
+        <h3 className="underline underline-offset-1 capitalize text-xl font-medium text-center mt-20 mb-20">
+          your cart is empty
+        </h3>
+      )}
+
+      {cart.length !== 0 && (
+        <section className="md:grid md:grid-cols-[2fr,1fr] md:gap-3 mt-5">
+          <div className="max-h-96 overflow-y-scroll">
+            <div className="grid grid-cols-[2fr,1fr,1fr,1fr] border-b-2 border-gray-400 capitalize pb-2">
+              <h3>product</h3>
+              <h3>price</h3>
+              <h3>quality</h3>
+              <h3>total</h3>
+            </div>
+            {cart.map((data) => {
+              return (
+                <CartItem
+                  name={data.name}
+                  key={data.id}
+                  amount={data.amount}
+                  image={data.image}
+                  quality={data.quality}
+                  id={data.id}
+                />
+              );
+            })}
           </div>
-          {cart.length && cart.map((data) => {
-            return  <CartItem
-            name={data.name}
-            key={data.id}
-            amount={data.amount}
-            image={data.image}
-            quality={data.quality}
-          />;
-          })}
-          {!cart.length && <h3 className="underline underline-offset-1 capitalize text-xl font-medium">your cart is empty</h3>}
-        </div>
-        <Checkout />
-      </section>
+          <Checkout />
+        </section>
+      )}
     </div>
   );
 }

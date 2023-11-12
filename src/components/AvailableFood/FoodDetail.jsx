@@ -10,7 +10,7 @@ function FoodDetails({ foodDetail }) {
       type: "CART/Add",
       payLoad: {
         name,
-        amount,
+        amount:price,
         image,
         description: detail,
         quality: 1,
@@ -18,7 +18,6 @@ function FoodDetails({ foodDetail }) {
       },
     });
   }
-  // console.log(foodDetail)
   return (
     <div className={style.card}>
       <img src={image} alt={name} />

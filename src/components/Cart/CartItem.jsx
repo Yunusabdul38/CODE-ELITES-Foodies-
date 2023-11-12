@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import { useContext } from "react";
 import { CartContext } from "../../Authentication/CartAuthContext";
 export default function CartItem({ name, image, quality, amount, id }) {
@@ -35,4 +36,11 @@ export default function CartItem({ name, image, quality, amount, id }) {
       <button className="absolute right-6 rounded-[50%] p-1 bg-red-700 text-white" onClick={removeItemHandler}>X</button>
     </div>
   );
+} 
+CartItem.propTypes={
+  name:PropTypes.string,
+  image:PropTypes.symbol,
+  quality:PropTypes.number,
+  amount:PropTypes.number,
+  id:PropTypes.number
 }

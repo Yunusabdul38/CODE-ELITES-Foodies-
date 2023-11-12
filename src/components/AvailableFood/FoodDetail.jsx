@@ -1,8 +1,9 @@
+import PropTypes from 'prop-types';
 import style from "./FoodDetails.module.css";
 import { CartContext } from "../../Authentication/CartAuthContext";
 import { useContext } from "react";
 function FoodDetails({ foodDetail }) {
-  const { cart, dispatchFn } = useContext(CartContext);
+  const { dispatchFn } = useContext(CartContext);
   const { name, price, image, description: detail,id } = foodDetail;
   const amount = `₦${price.toFixed(2)}`;
   function addcartHandler() {
@@ -31,6 +32,10 @@ function FoodDetails({ foodDetail }) {
       </div>
     </div>
   );
+}
+
+FoodDetails.propTypes={
+  foodDetail:PropTypes.object
 }
 
 export default FoodDetails;

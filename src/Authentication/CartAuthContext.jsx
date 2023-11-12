@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { createContext, useReducer } from "react";
 
 export const CartContext = createContext({
@@ -87,5 +88,7 @@ function CartAuthentication({ children }) {
     </CartContext.Provider>
   );
 }
-
+CartAuthentication.propTypes={
+    children:PropTypes.element
+  }
 export default CartAuthentication;

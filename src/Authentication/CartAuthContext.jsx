@@ -64,7 +64,6 @@ function reducerFn(state, actions) {
     return {
       ...state,
       cart: state.cart.concat(actions.payLoad),
-      // cart:state.cart.push(actions.payLoad),
       // cart:[...state.cart,actions.payLoad]
     };
   }

@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import { useContext } from "react";
 import { CartContext } from "../../Authentication/CartAuthContext";
 export default function CartItem({ name, image, quality, amount, id }) {
+  //total amount for a particular food, food quality multiply by the food price 
   const total = quality * amount
   const { dispatchFn } = useContext(CartContext);
   function removeItemHandler() {
@@ -19,7 +20,6 @@ export default function CartItem({ name, image, quality, amount, id }) {
         <img src={image} alt="food" className="w-24 h-28 rounded-md" />
         <div>
           <p className="font-medium">{name}</p>
-          {/* <p className="font-light">moi moi with egg</p> */}
         </div>
       </div>
       <h3>{`₦${amount.toFixed(2)}`}</h3>
@@ -39,7 +39,7 @@ export default function CartItem({ name, image, quality, amount, id }) {
 } 
 CartItem.propTypes={
   name:PropTypes.string,
-  image:PropTypes.symbol,
+  image:PropTypes.string,
   quality:PropTypes.number,
   amount:PropTypes.number,
   id:PropTypes.number

@@ -5,9 +5,9 @@ import FoodOptions from "./FoodOptions";
 import { foodItemsData } from "./FoodData";
 
 function FoodList() {
+  //available food data and optionValue for filter and searching through food item
   const [foods, setFoods] = useState({ food: foodItemsData, optionValue: "" });
-  //const [cart,setCart] = useState([])
-
+  //document title
   useEffect(() => {
     document.title = "Foodies || available Foods";
 
@@ -24,11 +24,13 @@ function FoodList() {
       
     />
   ));
+  //handler for filtering/showing a food categories base on the user optionValue
   function optionsHandler(data) {
     setFoods((prev) => {
       return { ...prev, food: data.food, optionValue: data.name };
     });
   }
+  //handler for searching/showing a food base on the user optionValue/search
   function searchHandler(e) {
     if (e.target.value.trim().length > 1) {
       const value = e.target.value;
@@ -40,16 +42,10 @@ function FoodList() {
         return { ...prev, food: newData, optionValue: e.target.value };
       });
     }
-
+    
     if (e.target.value.length === 0) {
-      console.log("yu");
       return setFoods({ food: foodItemsData, optionValue: "" });
     }
-  }
-  function addtocartHandler(data){
-    setCart(prev => {
-      return [...prev, data]
-    })
   }
   return (
     <section className={style.foodList}>
@@ -58,6 +54,7 @@ function FoodList() {
           type="text"
           placeholder="Search for food"
           onChange={searchHandler}
+         className="text-gray-700 pl-4" 
         />
         <FoodOptions options={optionsHandler} food={foodItemsData} />
       </div>

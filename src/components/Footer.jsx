@@ -2,7 +2,6 @@ import style from "./Footer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
-
 const heart = <FontAwesomeIcon icon={faHeart} style={{ color: "#ed1202" }} />;
 
 function Footer() {

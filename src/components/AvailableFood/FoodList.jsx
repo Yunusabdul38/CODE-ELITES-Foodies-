@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { ModalContext } from "../../Authentication/ModalAuthContext";
+import Modal from "../Modal/Modal";
 import style from "./FoodList.module.css";
 import FoodDetails from "./FoodDetail";
 import FoodOptions from "./FoodOptions";
 import { foodItemsData } from "./FoodData";
 
 function FoodList() {
+  const {isOpen} = useContext(ModalContext)
   //available food data and optionValue for filter and searching through food item
   const [foods, setFoods] = useState({ food: foodItemsData, optionValue: "" });
   //document title
@@ -48,7 +51,9 @@ function FoodList() {
     }
   }
   return (
-    <section className={style.foodList}>
+    <>
+    {isOpen && <Modal />}
+     <section className={style.foodList}>
       <div className={style.options}>
         <input
           type="text"
@@ -65,6 +70,7 @@ function FoodList() {
       )}
       <div className={style["cart-cards"]}>{foodDetail}</div>
     </section>
+    </>
   );
 }
 export default FoodList;

@@ -1,16 +1,22 @@
-import { useContext, useEffect } from "react";
+import { Fragment, useContext, useEffect } from "react";
 import { CartContext } from "../../Authentication/CartAuthContext";
 import CartItem from "./CartItem";
 import Checkout from "./Checkout";
+import NavigationBar from "../../components/NavBar";
+import Footer from "../../components/Footer";
+
 export default function Cart() {
   const { cart } = useContext(CartContext);
+  //page/document title
   useEffect(() => {
     document.title = "Foodies || Cart";
 
     return () => (document.title = "welcome to Foodies");
   });
   return (
-    <div className="p-7 bg-slate-200 text-slate-500 pad">
+   <Fragment>
+    <NavigationBar/>
+     <div className="p-7 bg-slate-200 text-slate-500 pad">
       <h1 className="text-slate-700 capitalize text-xl font-semibold  text-center">
         your food cart
       </h1>
@@ -46,5 +52,7 @@ export default function Cart() {
         </section>
       )}
     </div>
+    <Footer/>
+   </Fragment>
   );
 }

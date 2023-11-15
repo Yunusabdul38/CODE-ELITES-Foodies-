@@ -1,10 +1,12 @@
-function FoodOptions({ options, food }) {
+import ProPTypes from "prop-types"
+
+function FoodOptions({ optionsFunc, food }) {
   function optionsHandler(e) {
     const foods = food.filter((value) => value.category === e.target.value);
     if (e.target.value === "All") {
-      return options({food:food,name:""});
+      return optionsFunc({food:food,name:""});
     }
-    options({food:foods,name:e.target.value});
+    optionsFunc({food:foods,name:e.target.value});
   }
   return (
     <select onChange={optionsHandler}>
@@ -23,4 +25,8 @@ function FoodOptions({ options, food }) {
   );
 }
 
+FoodOptions.propTypes={
+  food:ProPTypes.object,
+  optionsFunc:ProPTypes.func
+}
 export default FoodOptions;

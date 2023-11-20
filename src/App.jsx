@@ -20,7 +20,7 @@ const route = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "AvailableFood",
+    path: "menu",
     element: <FoodList />,
     errorElement: <ErrorPage />,
   },

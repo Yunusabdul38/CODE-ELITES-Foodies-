@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import Header from "./Header";
 import Testimony from "./Testimony";
-import AboutUs from "./AboutUs";
 import Footer from "../../components/Footer";
+import WhyUs from "./WhyUs"
 import NavigationBar from "../../components/NavBar";
 
 function Home() {
@@ -12,13 +12,13 @@ function Home() {
     return () => (document.title = "welcome to Foodies");
   });
   return (
-    <>
+    <div className="bg-slate-300">
       <NavigationBar />
       <Header />
-      <AboutUs />
+      <WhyUs/>
       <Testimony />
       <Footer />
-    </>
+    </div>
   );
 }
 export default Home;

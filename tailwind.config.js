@@ -32,6 +32,11 @@ export default {
           to: { width: "100%" },
         },
       },
+      fontFamily:{
+        "takur":'Tektur, cursive',
+        'NotoSans':"Noto Sans, sans-seri",
+        "Inter":'Inter, sans-serif',
+      }
     }
   },
   plugins: [],

@@ -19,8 +19,8 @@ function NavigationBar() {
   const {pathname} =useLocation()
 
   return (
-    <nav className={`py-0 px-8 bg-[#ffe227] z-10 sticky top-0 w-full flex justify-between flex-col md:flex-row items-start md:items-center pb-3 md:py-3 md:h-fit transition-all ease-linear ${showMenu?"h-2/5":"h-14"}`}>
-      <Link to="/" className="font-medium text-4xl font-[ 'cursive']">Foodies</Link>
+    <nav className={`py-0 px-8 bg-[#ffe227] z-10 sticky top-0 w-full flex justify-between flex-col md:flex-row items-start md:items-center pb-3 md:py-3 md:h-fit transition-all ease-linear ${showMenu?"h-2/5":"h-14"} font-takur`}>
+      <Link to="/" className="font-medium text-4xl font-[ 'cursive'] text-[#393e46]">Foodies</Link>
       <ul className={`flex justify-between capitalize w-1/2 cursor-pointer text-xl flex-col md:flex-row pb-3 md:pb-0 ${!showMenu?"invisible md:visible md:flex":""}`} >
         <li className={`${pathname==="/"?"trnslate-y-[-5px] ml-4 md:ml-0 text-white transition-all ease-linear p-[5px] w-full max-w-[100px] text-center rounded-md bg-[#393e46]":""}`}><Link to="/">home</Link></li>
         <li className={`${pathname==="/AboutUs"?"trnslate-y-[-5px] ml-4 md:ml-0 text-white transition-all ease-linear p-[5px] w-full max-w-[100px] text-center rounded-md bg-[#393e46]":""}`}><Link to="/AboutUs">about us</Link></li>

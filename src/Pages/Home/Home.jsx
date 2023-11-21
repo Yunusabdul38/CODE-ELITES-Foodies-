@@ -12,7 +12,7 @@ function Home() {
     return () => (document.title = "welcome to Foodies");
   });
   return (
-    <div className="bg-slate-300">
+    <div className="bg-slate-300 max-w-screen-2xl mx-auto">
       <NavigationBar />
       <Header />
       <WhyUs/>

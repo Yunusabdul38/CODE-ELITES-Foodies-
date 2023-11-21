@@ -1,4 +1,4 @@
-import { Fragment, useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { CartContext } from "../../Authentication/CartAuthContext";
 import CartItem from "./CartItem";
 import Checkout from "./Checkout";
@@ -14,7 +14,7 @@ export default function Cart() {
     return () => (document.title = "welcome to Foodies");
   });
   return (
-   <Fragment>
+   <section className="max-w-screen-2xl mx-auto">
     <NavigationBar/>
      <div className="p-7 bg-slate-200 text-slate-500 pad">
       <h1 className="text-slate-700 capitalize text-xl font-semibold  text-center">
@@ -53,6 +53,6 @@ export default function Cart() {
       )}
     </div>
     <Footer/>
-   </Fragment>
+   </section>
   );
 }

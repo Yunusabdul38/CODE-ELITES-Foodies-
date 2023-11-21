@@ -48,10 +48,10 @@ function FoodList() {
     }
   }
   return (
-    <>
+    <section className="max-w-screen-2xl mx-auto">
     <NavigationBar/>
       {isOpen && <Modal />}
-      <section className={style.foodList}>
+      <section className={`${style.foodList} p-11`}>
         <div className={style.options}>
           <input
             type="text"
@@ -69,7 +69,7 @@ function FoodList() {
         <div className={style["cart-cards"]}>{foodDetail}</div>
       </section>
       <Footer/>
-    </>
+    </section>
   );
 }
 export default FoodList;

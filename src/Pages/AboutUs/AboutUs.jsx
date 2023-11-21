@@ -3,11 +3,11 @@ import Footer from "../../components/Footer";
 import Button from "../../components/Button";
 function AboutUs() {
   return (
-    <>
+    <section className="max-w-screen-2xl mx-auto bg-slate-700">
       <NavBar />
       <section className="md:px-10 py-5 pt-0">
         <h1 className="hidden md:block text-3xl capitalize text-center mt-5 mb-3">
-          about <span className="text-[#ffe227]">us</span>
+          about <span className="text-slate-400">us</span>
         </h1>
         <div className="flex  justify-between md:flex-row-reverse flex-col items-start gap-5">
           <img
@@ -35,12 +35,12 @@ function AboutUs() {
               journey to new heights.
             </p>
             <p>click below to check our menu </p>
-            <Button path="/menu" style="rounded px-4 bg-slate-700 hover:border-gray-300">view menu</Button>
+            <Button path="/menu" style="px-4 ">view menu</Button>
           </aside>
         </div>
       </section>
       <Footer />
-    </>
+    </section>
   );
 }
 export default AboutUs;

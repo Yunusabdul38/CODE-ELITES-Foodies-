@@ -33,7 +33,7 @@ export default {
         },
       },
       fontFamily:{
-        "takur":'Tektur, cursive',
+        "takur":'Tektur,sans-serif',
         'NotoSans':"Noto Sans, sans-seri",
         "Inter":'Inter, sans-serif',
       }

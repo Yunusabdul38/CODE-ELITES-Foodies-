@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Balls from "../../components/Balls";
 const testimonialData = [
   {
     comment:"Best place fo a quality meal",
@@ -78,36 +79,7 @@ function Testimony() {
             {name}, <span>&times;&times;&times;&times;</span>
           </p>
           <div className="flex gap-1">
-            <span
-              onClick={()=>setCurrent(0)}
-              className={`rounded-full w-3 h-3 ${
-                current === 0 ? "bg-[#ffe227]" : "bg-[#ffffff4f]"
-              }`}
-            ></span>
-            <span
-            onClick={()=>setCurrent(1)}
-              className={`rounded-full w-3 h-3 ${
-                current === 1 ? "bg-[#ffe227]" : "bg-[#ffffff4f]"
-              }`}
-            ></span>
-            <span
-            onClick={()=>setCurrent(2)}
-              className={`rounded-full w-3 h-3 ${
-                current === 2 ? "bg-[#ffe227]" : "bg-[#ffffff4f]"
-              }`}
-            ></span>
-            <span
-            onClick={()=>setCurrent(3)}
-              className={`rounded-full w-3 h-3 ${
-                current === 3 ? "bg-[#ffe227]" : "bg-[#ffffff4f]"
-              }`}
-            ></span>
-            <span
-            onClick={()=>setCurrent(4)}
-              className={`rounded-full w-3 h-3 ${
-                current === 4 ? "bg-[#ffe227]" : "bg-[#ffffff4f]"
-              }`}
-            ></span>
+            {testimonialData.map((_,index)=> <Balls key={index} index={index} current={current} setCurrent={setCurrent}/>)} 
           </div>
         </aside>
       </div>

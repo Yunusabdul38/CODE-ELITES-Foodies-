@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import { useState,useContext } from "react";
 import { useLocation } from 'react-router-dom';
 import { Link } from "react-router-dom";
@@ -11,7 +12,7 @@ const carticon = <FontAwesomeIcon icon={faCartShopping} />;
 const menuIcon = <FontAwesomeIcon icon={faBars} />;
 const xIcon = <FontAwesomeIcon icon={faXmark} />;
 
-function NavigationBar() {
+function NavigationBar({style=" bg-slate-500"}) {
   const {cart} = useContext(CartContext)
   const [showMenu, setShowMenu] = useState(false);  
   //total cart items
@@ -19,7 +20,7 @@ function NavigationBar() {
   const {pathname} =useLocation()
 
   return (
-    <nav className={`py-0 px-8 bg-[#ffe227] z-10 sticky top-0 w-full flex justify-between flex-col md:flex-row items-start md:items-center pb-3 md:py-3 md:h-fit transition-all ease-linear ${showMenu?"h-2/5":"h-14"} font-takur`}>
+    <nav className={`py-0 px-8 z-10 sticky top-0 w-full flex justify-between flex-col md:flex-row items-start md:items-center pb-3 md:py-3 md:h-fit transition-all ease-linear ${showMenu?"h-2/5":"h-14"} font-takur ${style}`}>
       <Link to="/" className="font-medium text-4xl font-[ 'cursive'] text-[#393e46]">Foodies</Link>
       <ul className={`flex justify-between capitalize w-1/2 cursor-pointer text-xl flex-col md:flex-row pb-3 md:pb-0 ${!showMenu?"invisible md:visible md:flex":""}`} >
         <li className={`${pathname==="/"?"trnslate-y-[-5px] ml-4 md:ml-0 text-white transition-all ease-linear p-[5px] w-full max-w-[100px] text-center rounded-md bg-[#393e46]":""}`}><Link to="/">home</Link></li>
@@ -33,5 +34,8 @@ function NavigationBar() {
       </span>
     </nav>
   );
+}
+NavigationBar.propTypes={
+  style:PropTypes.string,
 }
 export default NavigationBar;

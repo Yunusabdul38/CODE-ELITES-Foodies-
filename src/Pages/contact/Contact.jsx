@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./contact.css";
 import contactHero from "../../Assets/contactHero.jpg";
 import { BsFillTelephoneFill } from "react-icons/bs";
@@ -72,8 +72,8 @@ const Contact = () => {
   };
 
   return (
-    <Fragment>
-      <NavigationBar />
+    <section className="max-w-screen-2xl mx-auto">
+      <NavigationBar style={"bg-[#FFE227]"} />
       <section className="bg-white">
         <div
           id="cntHero"
@@ -225,7 +225,7 @@ const Contact = () => {
         </div>
       </section>
       <Footer />
-    </Fragment>
+    </section>
   );
 };
 

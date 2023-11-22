@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { FaStar } from "react-icons/fa6";
 import Balls from "../../components/Balls";
 const testimonialData = [
   {
@@ -75,8 +76,8 @@ function Testimony() {
           <p>
             {subText}
           </p>
-          <p className="capitalize">
-            {name}, <span>&times;&times;&times;&times;</span>
+          <p className="capitalize flex items-center gap-2">
+            {name}, <span className="flex gap-1">{Array.from({length:rating}).map(()=><FaStar color="gold" key={crypto.randomUUID()}/>)}</span>
           </p>
           <div className="flex gap-1">
             {testimonialData.map((_,index)=> <Balls key={index} index={index} current={current} setCurrent={setCurrent}/>)} 

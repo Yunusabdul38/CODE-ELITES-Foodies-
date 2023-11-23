@@ -13,3 +13,7 @@ body {
   color: #eeeeee;
   font-family: 'Inter', sans-serif;
 }
+/* .bg:hover{
+  transform: scale(1.2);
+  transition: all ease-in 1s;
+} */

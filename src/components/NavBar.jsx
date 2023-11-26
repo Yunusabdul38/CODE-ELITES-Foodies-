@@ -39,3 +39,6 @@ NavigationBar.propTypes={
   style:PropTypes.string,
 }
 export default NavigationBar;
+
+//bg-gray-500 absolute top-1 right-8 rounded-[50%] text-base px-1
+             

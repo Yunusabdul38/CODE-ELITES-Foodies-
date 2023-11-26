@@ -59,7 +59,7 @@ function Testimony() {
   
   return (
     <section className="flex justify-center">
-      <div className="w-4/5 bg-[#040D12] flex-wrap flex items-center">
+      <div className="w-11/12 md:w-4/5 bg-[#040D12] flex-wrap flex items-center">
         <img
           src="https://images.unsplash.com/photo-1613946069412-38f7f1ff0b65?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fHJlc3RhdXJhbnR8ZW58MHx8MHx8fDA%3D"
           alt="restaurant"

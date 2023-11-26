@@ -17,7 +17,7 @@ export default function CartItem({ name, image, quality, amount, id }) {
   return (
     <div className="grid grid-cols-[2fr,1fr,1fr,1fr] border-b-2 border-gray-400 py-4 items-center relative">
       <div className="flex items-center gap-4">
-        <img src={image} alt="food" className="w-24 h-28 rounded-md" />
+        <img src={image} alt="food" className=" w-24 h-28 rounded-md" />
         <div>
           <p className="font-medium">{name}</p>
         </div>
@@ -33,7 +33,7 @@ export default function CartItem({ name, image, quality, amount, id }) {
         </button>
       </div>
       <h3>{`₦${total.toFixed(2)}`}</h3>
-      <button className="absolute right-6 rounded-[50%] p-1 bg-red-700 text-white" onClick={removeItemHandler}>X</button>
+      <button className="absolute right-6 rounded-[50%] p-1 bg-slate-600 text-white" onClick={removeItemHandler}>X</button>
     </div>
   );
 } 

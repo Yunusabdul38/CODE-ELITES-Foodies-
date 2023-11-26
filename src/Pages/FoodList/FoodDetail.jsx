@@ -27,7 +27,7 @@ function FoodDetails({ foodDetail }) {
   }
   return (
     <div className={style.card}>
-      <img src={image} alt={name} />
+      <img src={image} alt={name} className="hover:scale-105 transition-all duration-100"/>
       <div>
         <h1>{name}</h1>
         <div>
@@ -47,9 +47,9 @@ function FoodDetails({ foodDetail }) {
             see more
           </Link>
         </div>
-        <div className={style["card-btn"]}>
+        <div className="flex justify-between items-center">
           <h2>{amount}</h2>
-          <button onClick={addcartHandler}>add cart</button>
+          <button className="bg-slate-900 text-slate-400 mt-2 py-3 px-4 rounded-md transition-all ease-in duration-100 border-2 hover:bg-slate-700 hover:border-slate-900 " onClick={addcartHandler}>add cart</button>
         </div>
       </div>
     </div>

@@ -10,7 +10,10 @@
   box-sizing: border-box;
 }
 body {
-  background-color:  #393e46d2;
   color: #eeeeee;
   font-family: 'Inter', sans-serif;
 }
+/* .bg:hover{
+  transform: scale(1.2);
+  transition: all ease-in 1s;
+} */

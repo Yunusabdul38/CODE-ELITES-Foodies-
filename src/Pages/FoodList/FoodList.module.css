@@ -1,0 +1,42 @@
+.foodList{
+    background-color: #eeeeee;
+    
+}
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+.options input{
+    width: 40%;
+    min-width: 250px;
+}
+.options select{
+    width: 20%;
+    min-width: 200px;
+}
+
+.foodList select, input{
+ background-color: #FFFBF5;
+ color: #393e46d2;
+ outline: none;
+ padding: 0 10px;
+ height: 50px;
+ border-radius: 5px;
+ box-shadow: 4px 4px 4px  whitesmoke;
+}
+
+.cart-cards{
+    margin-top: 50px;
+    display: flex;
+    justify-content:space-around;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.message{
+    margin: 50px;
+    color: black;
+    font-size: 1.5rem;
+}

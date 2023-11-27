@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { CartContext } from "../../Authentication/CartAuthContext"
+import { CartContext } from "../../context/CartAuthContext"
 
 export default function Checkout() {
   const {cart} = useContext(CartContext)

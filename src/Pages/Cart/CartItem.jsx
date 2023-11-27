@@ -1,9 +1,9 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 import { useContext } from "react";
-import { CartContext } from "../../Authentication/CartAuthContext";
+import { CartContext } from "../../context/CartAuthContext";
 export default function CartItem({ name, image, quality, amount, id }) {
-  //total amount for a particular food, food quality multiply by the food price 
-  const total = quality * amount
+  //total amount for a particular food, food quality multiply by the food price
+  const total = quality * amount;
   const { dispatchFn } = useContext(CartContext);
   function removeItemHandler() {
     dispatchFn({ type: "CART/REMOVE", payLoad: id });
@@ -33,14 +33,19 @@ export default function CartItem({ name, image, quality, amount, id }) {
         </button>
       </div>
       <h3>{`₦${total.toFixed(2)}`}</h3>
-      <button className="absolute right-6 rounded-[50%] p-1 bg-slate-600 text-white" onClick={removeItemHandler}>X</button>
+      <button
+        className="absolute right-6 rounded-[50%] p-1 bg-slate-600 text-white"
+        onClick={removeItemHandler}
+      >
+        X
+      </button>
     </div>
   );
-} 
-CartItem.propTypes={
-  name:PropTypes.string,
-  image:PropTypes.string,
-  quality:PropTypes.number,
-  amount:PropTypes.number,
-  id:PropTypes.number
 }
+CartItem.propTypes = {
+  name: PropTypes.string,
+  image: PropTypes.string,
+  quality: PropTypes.number,
+  amount: PropTypes.number,
+  id: PropTypes.number,
+};

@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { CartContext } from "../../Authentication/CartAuthContext";
+import { CartContext } from "../../context/CartAuthContext";
 import CartItem from "./CartItem";
 import Checkout from "./Checkout";
 import NavigationBar from "../../components/NavBar";
@@ -31,7 +31,7 @@ export default function Cart() {
           <div className="max-h-[27rem]  sm:w-full overflow-y-scroll">
            <div className="w-[37rem] sm:w-full">
            <div className="grid grid-cols-[2fr,1fr,1fr,1fr] border-b-2 border-gray-400 capitalize pb-2">
-              <h3>product</h3>
+              <h3>food</h3>
               <h3>price</h3>
               <h3>quality</h3>
               <h3>total</h3>

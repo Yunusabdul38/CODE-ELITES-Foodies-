@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ModalContext } from "../../Authentication/ModalAuthContext";
+import { ModalContext } from "../../context/ModalAuthContext";
 import { useParams } from "react-router-dom";
 export default function FoodFullDetail() {
   const { setIsOpen,category,detail,image,name } = useContext(ModalContext);

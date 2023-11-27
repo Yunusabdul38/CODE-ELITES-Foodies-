@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { ModalContext } from "../../Authentication/ModalAuthContext";
+import { ModalContext } from "../../context/ModalAuthContext";
 import Modal from "../../components/Modal/Modal";
 import style from "./FoodList.module.css";
 import FoodDetails from "./FoodDetail";

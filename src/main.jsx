@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import CartAuthentication from "./Authentication/CartAuthContext.jsx";
-import ModalAuthContext from "./Authentication/ModalAuthContext.jsx";
+import CartAuthentication from "./context/CartAuthContext.jsx";
+import ModalAuthContext from "./context/ModalAuthContext.jsx";
 import App from "./App.jsx";
 import "./index.css";
 

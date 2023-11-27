@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import style from "./FoodDetails.module.css";
-import { CartContext } from "../../Authentication/CartAuthContext";
+import { CartContext } from "../../context/CartAuthContext";
 import { useContext } from "react";
-import { ModalContext } from "../../Authentication/ModalAuthContext";
+import { ModalContext } from "../../context/ModalAuthContext";
 
 function FoodDetails({ foodDetail }) {
   const { dispatchFn } = useContext(CartContext);
